@@ -1,7 +1,8 @@
 import UIKit
 
 var list: [String] = ["buy milk", "part-time job @ 4pm", "go to gym"]
-var task = "uncomplete"
+var task: [String] = ["incomplete", "incomplete", "incomplete"]
+var intask = 0
 
 class ListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -12,11 +13,9 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let task = list[indexPath.row]
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "listCell") as! photoCell
-        cell.textLabel?.text = task
-        cell.task = task
+        cell.textLabel?.text = list[indexPath.row]
+        cell.task = task[indexPath.row]
         return cell
     }
     
@@ -32,6 +31,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        intask = list.index(of: list[indexPath.row])!
         performSegue(withIdentifier: "switch", sender: self)
     }
 
@@ -39,7 +39,6 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
 
 }
 

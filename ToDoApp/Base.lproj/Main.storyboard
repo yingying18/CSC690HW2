@@ -35,21 +35,22 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="listCell" id="9CW-bz-3Ed" customClass="photoCell" customModule="ToDoApp">
                                         <rect key="frame" x="0.0" y="28" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9CW-bz-3Ed" id="EGU-i9-nVS">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9CW-bz-3Ed" id="EGU-i9-nVS">
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Bo-We-Le0">
-                                                    <rect key="frame" x="293" y="0.0" width="50" height="43.5"/>
+                                                    <rect key="frame" x="303" y="0.0" width="40" height="40"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="50" id="OYp-Yz-OA0"/>
+                                                        <constraint firstAttribute="height" constant="40" id="Y2b-PX-V2c"/>
+                                                        <constraint firstAttribute="width" constant="40" id="bID-np-ULt"/>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="6Bo-We-Le0" firstAttribute="top" secondItem="EGU-i9-nVS" secondAttribute="top" id="253-Bc-4jd"/>
-                                                <constraint firstAttribute="bottom" secondItem="6Bo-We-Le0" secondAttribute="bottom" id="L6T-8e-6Pr"/>
-                                                <constraint firstAttribute="trailing" secondItem="6Bo-We-Le0" secondAttribute="trailing" id="QV1-bm-E2y"/>
+                                                <constraint firstItem="6Bo-We-Le0" firstAttribute="top" secondItem="EGU-i9-nVS" secondAttribute="top" id="6EY-lc-KNX"/>
+                                                <constraint firstAttribute="bottom" secondItem="6Bo-We-Le0" secondAttribute="bottom" id="W55-lZ-lqe"/>
+                                                <constraint firstAttribute="trailing" secondItem="6Bo-We-Le0" secondAttribute="trailing" id="hsp-Hi-g4Y"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -105,6 +106,9 @@
                                 <state key="normal" title="Complete">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="completePressed:" destination="Fx6-Yv-l4f" eventType="touchUpInside" id="21y-Hv-5fe"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fM9-eA-Iih">
                                 <rect key="frame" x="88" y="186" width="199" height="48"/>
@@ -113,6 +117,9 @@
                                 <state key="normal" title="Incomplete">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="incompletePressed:" destination="Fx6-Yv-l4f" eventType="touchUpInside" id="ylc-tX-vfh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n21-ui-x3b">
                                 <rect key="frame" x="135" y="405" width="105" height="36"/>
@@ -186,7 +193,7 @@
                         <edgeInsets key="layoutMargins" top="0.0" left="13" bottom="0.0" right="20"/>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Create" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Create" image="mapIcon" selectedImage="mapIcon" id="cPa-gy-q4n"/>
                     <connections>
                         <outlet property="input" destination="Vrp-bI-JLF" id="XOA-Hf-Mby"/>
                     </connections>
@@ -235,6 +242,6 @@
     </scenes>
     <resources>
         <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
+        <image name="mapIcon" width="37" height="37"/>
     </resources>
 </document>

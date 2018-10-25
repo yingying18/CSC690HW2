@@ -7,6 +7,7 @@ class photoCell: UITableViewCell {
         didSet {
             if let task = task {
                 icon.image = UIImage(named: task)
+                icon.contentMode = .scaleAspectFit
             }
         }
     }
