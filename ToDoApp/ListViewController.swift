@@ -1,7 +1,7 @@
 import UIKit
 
-var list: [String] = ["buy milk", "part-time job @ 4pm", "go to gym"]
-var task: [String] = ["incomplete", "incomplete", "incomplete"]
+var list = [String] ()
+var task = [String] ()
 var intask = 0
 
 class ListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {

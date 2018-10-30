@@ -1,11 +1,3 @@
-//
-//  ToDoAppTests.swift
-//  ToDoAppTests
-//
-//  Created by Jasmine Chen on 10/24/18.
-//  Copyright © 2018 Jasmine Chen. All rights reserved.
-//
-
 import XCTest
 @testable import ToDoApp
 
