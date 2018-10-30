@@ -13,18 +13,22 @@ class EditViewController: UIViewController {
     }
     
     @IBAction func completePressed(_ sender: Any) {
-        let completeItem = list[intask]
-        list.remove(at: intask)
-        list.append(completeItem)
-        task.remove(at: intask)
-        task.append("complete")
+        if (task[intask] != "complete") {
+            let completeItem = list[intask]
+            list.remove(at: intask)
+            list.append(completeItem)
+            task.remove(at: intask)
+            task.append("complete")
+        }
     }
     
     @IBAction func incompletePressed(_ sender: Any) {
-        let incompleteItem = list[intask]
-        list.remove(at: intask)
-        list.insert(incompleteItem, at: 0)
-        task.remove(at: intask)
-        task.insert("incomplete", at: 0)
+        if (task[intask] != "incomplete") {
+            let incompleteItem = list[intask]
+            list.remove(at: intask)
+            list.insert(incompleteItem, at: 0)
+            task.remove(at: intask)
+            task.insert("incomplete", at: 0)
+        }
     }
 }

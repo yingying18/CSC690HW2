@@ -6,8 +6,8 @@ class CreateViewController: UIViewController {
     
     @IBAction func createPressed(_ sender: Any) {
         if(input.text != ""){
-            list.append(input.text!)
-            task.append("incomplete")
+            list.insert(input.text!, at: 0)
+            task.insert("incomplete", at: 0)
             input.text = ""
         }
     }
