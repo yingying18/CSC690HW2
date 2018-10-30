@@ -1,6 +1,6 @@
 import UIKit
 
-class EditViewController: UIViewController {
+class EditItem: UIViewController {
     @IBOutlet var editInput: UITextField!
     @IBAction func updatePressed(_ sender: Any){
         if(editInput.text != ""){

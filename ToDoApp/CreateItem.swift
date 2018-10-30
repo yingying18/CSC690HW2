@@ -1,6 +1,6 @@
 import UIKit
 
-class CreateViewController: UIViewController {
+class CreateItem: UIViewController {
 
     @IBOutlet var input: UITextField!
     
