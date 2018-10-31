@@ -9,7 +9,11 @@ class EditViewController: UIViewController {
             editInput.text = ""
             task.remove(at: intask)
             task.insert("incomplete", at: 0)
+            
+            UserDefaults.standard.set(list, forKey: "todolist")
+            UserDefaults.standard.set(task, forKey: "completion?")
         }
+        
     }
     
     @IBAction func completePressed(_ sender: Any) {
@@ -19,6 +23,9 @@ class EditViewController: UIViewController {
             list.append(completeItem)
             task.remove(at: intask)
             task.append("complete")
+            
+            UserDefaults.standard.set(list, forKey: "todolist")
+            UserDefaults.standard.set(task, forKey: "completion?")
         }
     }
     
@@ -29,6 +36,9 @@ class EditViewController: UIViewController {
             list.insert(incompleteItem, at: 0)
             task.remove(at: intask)
             task.insert("incomplete", at: 0)
+            
+            UserDefaults.standard.set(list, forKey: "todolist")
+            UserDefaults.standard.set(task, forKey: "completion?")
         }
     }
 }

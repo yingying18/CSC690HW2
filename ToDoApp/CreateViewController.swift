@@ -9,6 +9,8 @@ class CreateViewController: UIViewController {
             list.insert(input.text!, at: 0)
             task.insert("incomplete", at: 0)
             input.text = ""
+            UserDefaults.standard.set(list, forKey: "todolist")
+            UserDefaults.standard.set(task, forKey: "completion?")
         }
     }
     

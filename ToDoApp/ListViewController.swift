@@ -9,6 +9,8 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet var myTableView: UITableView!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if let x = UserDefaults.standard.object(forKey: "todolist") {list = x as! [String]}
+        if let x = UserDefaults.standard.object(forKey: "completion?") {task = x as! [String]}
         return list.count
     }
     
@@ -22,6 +24,8 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == UITableViewCell.EditingStyle.delete {
             list.remove(at: indexPath.row)
+            UserDefaults.standard.set(list, forKey: "todolist")
+            UserDefaults.standard.set(task, forKey: "completion?")
             myTableView.reloadData()
         }
     }
