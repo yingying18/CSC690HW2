@@ -1,6 +1,6 @@
 ## Wenying Chen
 
-## CSC 690 Homework 2
+## CSC 690 Homework 2: To Do List
 
 ## App Functions
   - Click create tab to go to another tab. Enter a text and click create to add to the To Do List
